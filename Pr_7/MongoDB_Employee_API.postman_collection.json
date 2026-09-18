@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "769d03cc-c7f8-4b71-bdfc-2cf2c8d23467",
+		"name": "MongoDB Employee Management API",
+		"description": "API collection for testing the Employee Management API with MongoDB Atlas.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Sarah Jenkins\",\n    \"position\": \"Software Engineer\",\n    \"department\": \"Engineering\",\n    \"salary\": 95000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Employee (Replace ID)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/employees/<paste_mongodb_id_here>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"employees",
+						"<paste_mongodb_id_here>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee (Replace ID)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"position\": \"Senior Software Engineer\",\n    \"salary\": 115000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/employees/<paste_mongodb_id_here>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"employees",
+						"<paste_mongodb_id_here>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee (Replace ID)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/employees/<paste_mongodb_id_here>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"employees",
+						"<paste_mongodb_id_here>"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
