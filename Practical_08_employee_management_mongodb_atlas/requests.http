@@ -1,0 +1,8 @@
+### List employees
+GET http://localhost:3002/api/employees
+
+### Create employee
+POST http://localhost:3002/api/employees
+Content-Type: application/json
+
+{"name":"Aarav Patel","email":"aarav@example.com","department":"Engineering","salary":52000}

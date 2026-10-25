@@ -1,0 +1,3 @@
+const mongoose = require('mongoose');
+const schema = new mongoose.Schema({ title: { type: String, required: true, trim: true, maxlength: 150 }, description: { type: String, trim: true, maxlength: 1000, default: '' }, category: { type: String, trim: true, default: 'General', maxlength: 50 }, originalName: { type: String, required: true }, storedName: { type: String, required: true, unique: true }, mimeType: { type: String, required: true }, size: { type: Number, required: true }, owner: { type: mongoose.Schema.Types.ObjectId, ref: 'DocumentUser', required: true } }, { timestamps: true });
+module.exports = mongoose.model('Document', schema);

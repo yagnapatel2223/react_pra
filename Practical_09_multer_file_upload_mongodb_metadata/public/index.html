@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Secure File Upload</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="shell">
+<header>
+<span>FILE LAB 09</span>
+<h1>Upload centre</h1>
+<p>Upload a PDF, image or text document and save its metadata.</p>
+</header>
+<section class="panel">
+<form id="uploadForm">
+<label for="file">Choose a file</label>
+<input id="file" name="file" type="file" accept=".pdf,.png,.jpg,.jpeg,.txt,.doc,.docx" required>
+<button>Upload file</button>
+</form>
+<p id="status" role="status">Maximum file size is controlled by the server.</p>
+</section>
+<section class="panel">
+<div class="row">
+<h2>Recent uploads</h2>
+<button id="refresh" type="button" class="alt">Refresh list</button>
+</div>
+<div id="files">No metadata loaded yet.</div>
+</section>
+</main>
+<script src="/app.js">
+</script>
+</body>
+</html>
